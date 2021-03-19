@@ -1,4 +1,3 @@
-
 export interface User extends ApiResponse {
   id: number
   name: string
