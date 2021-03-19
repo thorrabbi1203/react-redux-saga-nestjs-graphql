@@ -1,0 +1,9 @@
+export const SERVER_PORT = '2205';
+export const JWT_SECRET = 'myStrongSecret';
+export const DATABASE_HOST = 'localhost';
+export const DATABASE_PORT = '3306';
+export const DATABASE_USERNAME = 'root';
+export const DATABASE_PASSWORD = '12345678';
+export const DATABASE_NAME = 'bunnydb';
+export const DEFAULT_USER_EMAIL = 'admin1@gmail.com';
+export const DEFAULT_USER_PASSWORD = '12341234';

@@ -1,0 +1,22 @@
+.Header {
+  &-logo {
+    font-size: large;
+    height: 3.125em;
+  }
+  &-input {
+    margin-left: 1em;
+    margin-right: 1em;
+    width: 30em;
+    height: 3.125em;
+    top: 8%;
+  }
+  &-item {
+    font-size: large;
+    height: 3.125em;
+  }
+  &-setting {
+    font-size: large;
+    height: 3.125em;
+    text-align: center;
+  }
+}

@@ -1,0 +1,19 @@
+@import '../../styles/variables.scss';
+
+.Main-Page {
+  &-Side-bar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: $SIDEBAR_WIDTH;
+    padding: 8rem 2rem 2rem 1.5rem;
+    background-color: black;
+    &-item {
+      &-home {
+        width: 50%;
+        // font-size: ;
+      }
+    }
+  }
+}

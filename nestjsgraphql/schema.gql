@@ -1,0 +1,49 @@
+scalar DateTime
+
+input DeleteMessageInput {
+  id: Float!
+  userId: Float!
+}
+
+type Message {
+  id: Float!
+  userId: Float!
+  content: String!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  user: User!
+}
+
+input MessageInput {
+  content: String!
+  userId: Float!
+}
+
+type Mutation {
+  createOrLoginUser(data: UserInput!): User!
+  createMessage(data: MessageInput!): Message!
+  deleteMessage(data: DeleteMessageInput!): Message!
+}
+
+type Query {
+  getUsers: [User!]!
+  getUser(id: Float!): User
+  getMessages: [Message!]!
+  getMessagesFromUser(userId: Float!): [Message!]!
+  getMessage(id: Float!): Message
+}
+
+type Subscription {
+  messageAdded: Message!
+}
+
+type User {
+  id: Float!
+  email: String!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+input UserInput {
+  email: String!
+}

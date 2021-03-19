@@ -1,0 +1,100 @@
+@import '../../styles/variables.scss';
+
+.Anonymous {
+  &-Content {
+    position: relative;
+    justify-content: space-evenly;
+    padding-left: $SIDEBAR_WIDTH;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 200px;
+    // height: 100vh;
+    @media (max-height: $BODY_MIN_HEIGHT_MAX) {
+      min-height: $BODY_MIN_HEIGHT;
+    }
+  }
+  &-Children {
+    flex: 1;
+    width: 100%;
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 8rem 1rem 2rem;
+  }
+
+  &-Sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: $SIDEBAR_WIDTH;
+    padding: 8rem 2rem 2rem 1.5rem;
+    background-image: url('../assets/img/sidebar-4.jpg');
+    background-size: cover;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  &-Footer {
+    display: flex;
+    background-color: black;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    &Item {
+      flex: 0.4;
+      padding: 1rem 2rem;
+      padding-right: 0;
+      &:nth-child(3) {
+        flex: none;
+        width: 11rem;
+        float: right;
+      }
+    }
+    .text-secondary {
+      color: #cfcfcf !important;
+    }
+  }
+
+  &-NestJsApp {
+    position: relative;
+    color: white;
+    &Logo {
+      width: 100%;
+      padding-bottom: 34%;
+      // background-image: url('../assets/github/angular.png');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-bottom: 1rem;
+    }
+    &Sologan {
+      position: relative;
+      margin-top: calc(50vh - 15rem);
+      @media (max-height: 499px) {
+        // body min height 500px
+        margin-top: 4rem;
+      }
+      font-size: 2rem;
+      &:before {
+        // content: 'Bunny here for HoAn';
+        display: block;
+      }
+      &:after {
+        // content: 'But u not here for me';
+        display: block;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        margin-top: 1rem;
+      }
+    }
+  }
+}
